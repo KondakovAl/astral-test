@@ -1,27 +1,23 @@
 /*Fonts*/
-$font-stack: 'Open Sans', sans-serif;
+$font-stack-primary: 'Montserrat', sans-serif;
+$font-stack-secondary: 'Dela Gothic One', cursive;
 
 /*Colors*/
-/*&_text*/
-$color-text-main: #2ac5a8;
-$color-text-light: #ffffff;
-$color-text-dark: #000;
-$color-text-disabled: #d7d9d9;
-
-/*&_bg*/
-$color-bg-main: #dcf5e6;
-$color-bg-secondary: #0bc08a;
-$color-bg-thirdly: #07c7a4;
-$color-bg-dark: #000000;
-$color-bg-light: #ffffff;
-$color-bg-disabled: #d7d9d9;
-$color-bg-input: #f2f2f2;
-
-/*&_buttons*/
-$color-button-main: #0bc08a;
-$color-button-secondary: #07c7a4;
-
-/*BreakPoints*/
-$first-breakpoint: 1024px;
-$second-breakpoint: 750px;
-$third-breakpoint: 500px;
+/*&primary*/
+$primary-light: #fff;
+$primary-dark: #000;
+$primary-cyan-light: #c3dce3;
+$primary-cyan-dark: #2b788b;
+$primary-pink-light: #f2d4dc;
+$primary-pink-dark: #945069;
+$primary-grey-light: #f6f5f4;
+$primary-grey-medium: #e0e0e0;
+$primary-grey-icon: #bababa;
+$primary-grey-dark: #757575;
+/*&secondary*/
+$secondary-cyan: #5996a5;
+$secondary-green: #639b6d;
+$secondary-pink: #a15993;
+$secondary-red: #a95151;
+$secondary-yellow: #c4a24c;
+$secondary-orange: #cb5b43;
