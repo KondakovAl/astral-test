@@ -1,0 +1,33 @@
+@import 'src/assets/scss/core/variables';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  &__title {
+    color: $primary-cyan-dark;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__quote {
+    font-family: $font-stack-secondary;
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    max-width: 450px;
+  }
+  &__text {
+    color: $primary-grey-dark;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 600;
+    margin-bottom: 45px;
+    max-width: 350px;
+  }
+  &__features {
+    display: flex;
+  }
+}
