@@ -1,0 +1,47 @@
+@import 'src/assets/scss/core/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  &__logo {
+    font-family: $font-stack-secondary;
+    font-size: 17px;
+    line-height: 17px;
+    margin-right: 24px;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    border-left: 1px solid $primary-grey-dark;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    color: $primary-grey-dark;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    &_item {
+      padding: 5px;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      &_active {
+        color: $primary-dark;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__login {
+    background: transparent;
+    color: $primary-dark;
+  }
+}
