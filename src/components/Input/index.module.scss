@@ -1,0 +1,63 @@
+@import '/src/assets/scss/core/variables';
+
+.input {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  width: 100%;
+  position: relative;
+  &__field {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid $color-bg-thirdly;
+    border-radius: 7px;
+    transition: border 0.2s ease-in;
+    background: $color-bg-input;
+    &::placeholder {
+      text-transform: capitalize;
+      color: currentColor;
+      transition: color 0.2s ease-in, opacity 0.2s ease-in;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+    &:read-only {
+      user-select: none;
+      pointer-events: none;
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      &:focus {
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+      &:read-only {
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+      &::placeholder {
+        opacity: 0.3;
+      }
+    }
+    &_disabled {
+      opacity: 0.4;
+      &::placeholder {
+        font: inherit;
+        color: $color-text-disabled;
+      }
+    }
+    &_error {
+      position: absolute;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: none;
+      margin-top: 3px;
+    }
+  }
+}
