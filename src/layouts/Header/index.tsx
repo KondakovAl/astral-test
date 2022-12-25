@@ -6,6 +6,7 @@ import cn from 'classnames';
 
 import Routes from '../../constants/Routes';
 import { Link, useLocation } from 'react-router-dom';
+import { ArrowIcon } from '../../assets/icons';
 
 const Header = () => {
   const data = [
@@ -35,10 +36,10 @@ const Header = () => {
             ))}
           </nav>
         </div>
-        <div className={styles.header__buttons}>
-          <Button className={styles.header__login}>Login →</Button>
-          <Button>Sing Up</Button>
-        </div>
+
+        <Button className={styles.header__login}>
+          <span>Login</span> <ArrowIcon />
+        </Button>
       </header>
     </>
   );

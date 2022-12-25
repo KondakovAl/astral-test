@@ -35,13 +35,11 @@
       }
     }
   }
-  &__buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+
   &__login {
-    background: transparent;
-    color: $primary-dark;
+    gap: 3px;
+    & svg path {
+      fill: $primary-light;
+    }
   }
 }

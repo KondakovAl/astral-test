@@ -36,45 +36,20 @@ export const CorrectIcon: FC<IconProps> = ({ className, onClick }) => {
   );
 };
 
-export const DeleteIcon: FC<IconProps> = ({ className, onClick }) => {
+export const ArrowIcon: FC<IconProps> = ({ className, onClick }) => {
   return (
     <svg
-      width='17'
-      height='19'
-      viewBox='0 0 17 19'
+      width='8'
+      height='7'
+      viewBox='0 0 8 7'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       className={className}
       onClick={onClick}
     >
       <path
-        d='M1 4.33325H2.66667H16'
-        stroke='#F76363'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M5.16675 4.33333V2.66667C5.16675 2.22464 5.34234 1.80072 5.6549 1.48816C5.96746 1.17559 6.39139 1 6.83342 1H10.1667C10.6088 1 11.0327 1.17559 11.3453 1.48816C11.6578 1.80072 11.8334 2.22464 11.8334 2.66667V4.33333M14.3334 4.33333V16C14.3334 16.442 14.1578 16.866 13.8453 17.1785C13.5327 17.4911 13.1088 17.6667 12.6667 17.6667H4.33341C3.89139 17.6667 3.46746 17.4911 3.1549 17.1785C2.84234 16.866 2.66675 16.442 2.66675 16V4.33333H14.3334Z'
-        stroke='#F76363'
-        strokeOpacity='0.76'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M6.83325 8.5V13.5'
-        stroke='#FF6A6A'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M10.1667 8.5V13.5'
-        stroke='#FF6A6A'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        d='M5.292 0.647132L7.364 3.79713L5.292 6.97513H3.402L5.306 3.79713L3.402 0.647132H5.292ZM5.712 3.04113V4.56713H0.7V3.04113H5.712Z'
+        fill='#000'
       />
     </svg>
   );

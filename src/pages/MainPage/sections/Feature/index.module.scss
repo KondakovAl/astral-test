@@ -1,0 +1,50 @@
+@import 'src/assets/scss/core/variables';
+
+.feature {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 1px;
+    right: -40px;
+    background: $primary-grey-icon;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:last-child {
+    margin-right: 0px;
+    &::after {
+      content: none;
+    }
+  }
+  &__top {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-around;
+  }
+  &__img {
+    width: 20px;
+    height: 32px;
+  }
+  &__count {
+    display: flex;
+    font-family: $font-stack-secondary;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    &_plus {
+      color: $primary-cyan-dark;
+    }
+  }
+  &__text {
+    color: $primary-grey-dark;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
