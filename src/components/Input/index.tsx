@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 
 import styles from './index.module.scss';
 
@@ -11,9 +11,16 @@ interface InputProps {
   type: string;
   placeholder: string;
   className?: string;
+  setError: Dispatch<SetStateAction<string>>;
 }
 
-const Input: FC<InputProps> = ({ type, className, placeholder, name }) => {
+const Input: FC<InputProps> = ({
+  type,
+  className,
+  placeholder,
+  name,
+  setError,
+}) => {
   const [field, meta] = useField(name);
 
   return (
@@ -24,6 +31,7 @@ const Input: FC<InputProps> = ({ type, className, placeholder, name }) => {
         placeholder={placeholder}
         {...field}
         autoComplete={'off'}
+        onInput={() => setError('')}
       />
       {meta.touched && meta.error ? (
         <div className={styles.input__field_error}>{meta.error}</div>

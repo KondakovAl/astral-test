@@ -1,4 +1,8 @@
 @import '../../assets/scss/core/variables';
 
 .page {
+  &__body {
+    align-items: center;
+    justify-content: center;
+  }
 }

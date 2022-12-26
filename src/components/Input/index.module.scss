@@ -1,18 +1,18 @@
 @import '/src/assets/scss/core/variables';
 
 .input {
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 300;
   width: 100%;
   position: relative;
   &__field {
     width: 100%;
     padding: 10px 15px;
-    border: 1px solid $color-bg-thirdly;
+    border: 1px solid $primary-grey-dark;
     border-radius: 7px;
     transition: border 0.2s ease-in;
-    background: $color-bg-input;
+    background: $primary-cyan-light;
     &::placeholder {
       text-transform: capitalize;
       color: currentColor;
@@ -49,15 +49,15 @@
       opacity: 0.4;
       &::placeholder {
         font: inherit;
-        color: $color-text-disabled;
+        color: $primary-grey-light;
       }
     }
     &_error {
       position: absolute;
       font-size: 14px;
-      line-height: 16px;
+      line-height: 14px;
       text-transform: none;
-      margin-top: 3px;
+      margin-top: 2px;
     }
   }
 }

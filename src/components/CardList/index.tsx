@@ -7,11 +7,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../store/store';
 import { setTotalCount } from '../../store/paginationSlice';
 
+import cn from 'classnames';
+
 interface CardListProps {
   cards: ICard[];
+  className?: string;
 }
 
-const CardList: FC<CardListProps> = ({ cards }) => {
+const CardList: FC<CardListProps> = ({ cards, className }) => {
   const { page, limit } = useSelector((state: RootState) => state.pagination);
   const dispatch = useDispatch();
 
@@ -23,9 +26,9 @@ const CardList: FC<CardListProps> = ({ cards }) => {
   const indexOfFirst = indexOfLast - limit;
 
   return (
-    <ul className={styles.list}>
+    <ul className={cn(styles.list, className)}>
       {cards.slice(indexOfFirst, indexOfLast).map((card: ICard) => (
-        <Card card={card} />
+        <Card card={card} key={card.id} />
       ))}
     </ul>
   );

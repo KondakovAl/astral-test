@@ -1,0 +1,28 @@
+@import 'src/assets/scss/core/variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 25px;
+  background: $primary-pink-light;
+  border: 2px solid $primary-pink-dark;
+  border-radius: 20px;
+  position: relative;
+  &__title {
+    font-family: $font-stack-secondary;
+    font-size: 30px;
+    line-height: 35px;
+    align-self: center;
+  }
+  &__button {
+    align-self: center;
+  }
+  &__error {
+    position: absolute;
+    text-align: center;
+    bottom: -20px;
+    font-weight: 600;
+    color: $primary-pink-dark;
+  }
+}

@@ -9,7 +9,6 @@
   transform-style: preserve-3d;
   position: relative;
   transition: all 0.4s ease-in;
-
   &_flipped {
     transform: rotateY(180deg);
   }
