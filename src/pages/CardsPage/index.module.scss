@@ -1,4 +1,7 @@
 @import '../../assets/scss/core/variables';
 
 .page {
+  &__body {
+    flex-direction: column;
+  }
 }
