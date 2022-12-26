@@ -1,6 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import paginationSlice from './paginationSlice';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  pagination: paginationSlice,
+});
 
 export const store = configureStore({
   reducer: rootReducer,

@@ -1,1 +1,6 @@
-export interface UserProps {}
+export interface ICard {
+  id: number;
+  word: string;
+  meaning: string;
+  translation: string;
+}
