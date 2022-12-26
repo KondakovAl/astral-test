@@ -1,0 +1,43 @@
+@import 'src/assets/scss/core/variables';
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    &_circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background: $primary-cyan-light;
+      color: $primary-cyan-dark;
+      border-radius: 50%;
+      text-transform: uppercase;
+    }
+    &_name {
+      font-weight: 300;
+      font-size: 15px;
+      color: $primary-grey-dark;
+      text-transform: capitalize;
+    }
+  }
+  &__login {
+    gap: 3px;
+    & svg path {
+      fill: $primary-light;
+    }
+  }
+  &__logout {
+    background: transparent;
+    color: $primary-dark;
+    gap: 3px;
+  }
+}

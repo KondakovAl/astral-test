@@ -4,4 +4,7 @@
   &__body {
     flex-direction: column;
   }
+  &__list_denied {
+    filter: blur(3px);
+  }
 }
