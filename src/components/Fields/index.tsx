@@ -28,25 +28,27 @@ const Field: FC<FieldProps> = ({ item, handleChange }) => {
               />
             )}
           {item.type === 'select' && (
-            <select
-              className={styles.field__input}
-              value={item.value}
-              onChange={(evt) => handleChange(item.name, evt.target.value)}
-            >
-              {item.options?.map((el: OptionsProps) => (
-                <option value={el.value} key={el.id}>
-                  {el.value}
-                </option>
-              ))}
-            </select>
+            <div className={styles.field__select}>
+              <select
+                className={cn(styles.field__input)}
+                value={item.value}
+                onChange={(evt) => handleChange(item.name, evt.target.value)}
+              >
+                {item.options?.map((el: OptionsProps) => (
+                  <option value={el.value} key={el.id}>
+                    {el.value}
+                  </option>
+                ))}
+              </select>
+            </div>
           )}
           {item.type === 'radio' && (
             <>
               {item.options?.map((el: OptionsProps) => (
-                <div className={styles.field__radio} key={el.id}>
+                <label className={styles.field__radio} key={el.id}>
                   <span>{el.value}</span>
                   <input
-                    className={styles.field__input}
+                    className={styles.field__radio_real}
                     value={el.value}
                     name={item.name}
                     type={item.type}
@@ -55,7 +57,8 @@ const Field: FC<FieldProps> = ({ item, handleChange }) => {
                       handleChange(item.name, evt.target.value)
                     }
                   />
-                </div>
+                  <span className={styles.field__radio_custom} />
+                </label>
               ))}
             </>
           )}
@@ -91,15 +94,16 @@ const Field: FC<FieldProps> = ({ item, handleChange }) => {
                 })}
                 key={el.id}
               >
-                <span>{el.value}</span>
+                <span className={styles.field__checkbox_title}>{el.value}</span>
                 <input
-                  className={styles.field_checkbox_input}
+                  className={styles.field__checkbox_real}
                   name={item.name}
                   type={item.type}
                   checked={el.checked}
                   disabled={el.disabled}
                   onChange={() => handleChange(item.name, el)}
                 />
+                <span className={styles.field__checkbox_custom} />
               </label>
             ))}
           </>

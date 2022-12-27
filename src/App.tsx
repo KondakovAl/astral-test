@@ -34,7 +34,7 @@ const App = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate(Path.main);
+      navigate(Path.login);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
