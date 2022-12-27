@@ -2,12 +2,12 @@ import styles from './index.module.scss';
 
 import cn from 'classnames';
 
-interface LayoutProps {
+interface PageProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
-const Page = ({ children, className }: LayoutProps) => {
+const Page = ({ children, className }: PageProps) => {
   return (
     <div className={cn(styles.page, className)}>
       <div className={styles.page__wrapper}>{children}</div>

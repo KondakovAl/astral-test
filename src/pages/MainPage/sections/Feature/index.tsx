@@ -23,7 +23,7 @@ const Feature: FC<FeatureProps> = ({ feature }) => {
         <div className={styles.feature__count}>
           <Counter
             val={feature.count}
-            time={50}
+            time={40}
             className={styles.feature__count_number}
           />
           <span className={styles.feature__count_plus}>+</span>

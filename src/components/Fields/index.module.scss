@@ -1,0 +1,55 @@
+@import '../../assets/scss/core/variables';
+
+.field {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 300;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  &__name {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  &__input {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid $primary-grey-dark;
+    border-radius: 7px;
+    background: $primary-cyan-light;
+  }
+  &__radio {
+    display: flex;
+    gap: 20px;
+    & input {
+      width: auto;
+    }
+  }
+  &__range {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &_top {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
+
+    & span {
+      transition: all 0.3s ease;
+      width: inherit;
+    }
+    &_disabled {
+      & span {
+        color: $primary-grey-medium;
+      }
+    }
+  }
+}
