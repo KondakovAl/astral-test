@@ -15,6 +15,7 @@ const Counter: FC<CounterProps> = ({ val, time, className }) => {
 
   useEffect(() => {
     currVal !== val && setTimeout(setCurrVal, time, currVal + 1);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currVal]);
 
