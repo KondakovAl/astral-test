@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
 import styles from './index.module.scss';
 
@@ -54,7 +54,7 @@ const LoginForm: FC<FormProps> = ({ className }) => {
         if (values.login === 'admin' && values.password === 'admin') {
           dispatch(
             setCredentials({
-              user: values.login,
+              user: 'alex',
               token: 'c76fb018-27c9-43f7-a751-62646eda7e1a-1',
             })
           );

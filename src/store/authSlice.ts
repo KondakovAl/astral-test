@@ -19,11 +19,13 @@ const authSlice = createSlice({
       state.user = user;
       state.token = token;
       state.isAuth = !!user;
+      localStorage.setItem('auth', JSON.stringify(state));
     },
     logOut: (state: authSliceProps) => {
       state.isAuth = false;
       state.user = null;
       state.token = null;
+      localStorage.removeItem('auth');
     },
   },
 });

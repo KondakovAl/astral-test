@@ -1,7 +1,5 @@
 import styles from './index.module.scss';
 
-import cn from 'classnames';
-
 import { Link } from 'react-router-dom';
 import { ArrowIcon } from '../../../../assets/icons';
 

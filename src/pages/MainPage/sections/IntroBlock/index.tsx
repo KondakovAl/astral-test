@@ -8,12 +8,14 @@ interface IntroBlockProps {
     title: string;
     quote: string;
     text: string;
-    features: {
-      name: string;
-      count: number;
-      icon: string;
-    }[];
+    features: IFeature[];
   };
+}
+
+interface IFeature {
+  name: string;
+  count: number;
+  icon: string;
 }
 
 const IntroBlock: FC<IntroBlockProps> = ({ data }) => {
@@ -23,7 +25,7 @@ const IntroBlock: FC<IntroBlockProps> = ({ data }) => {
       <p className={styles.intro__quote}>{data.quote}</p>
       <p className={styles.intro__text}>{data.text}</p>
       <ul className={styles.intro__features}>
-        {data.features.map((feature: any, index: number) => (
+        {data.features.map((feature: IFeature, index: number) => (
           <Feature feature={feature} key={index} />
         ))}
       </ul>

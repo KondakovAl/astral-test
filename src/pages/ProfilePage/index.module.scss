@@ -1,4 +1,67 @@
 @import '../../assets/scss/core/variables';
 
 .page {
+  &__body {
+    flex-direction: column;
+  }
+  &__view {
+    &_personal {
+      & > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, max-content);
+        & > label {
+          &:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+          &:nth-child(2) {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+          &:nth-child(3) {
+            grid-area: 3 / 1 / 4 / 2;
+          }
+          &:nth-child(4) {
+            grid-area: 4 / 1 / 5 / 2;
+          }
+          &:nth-child(5) {
+            grid-area: 5 / 1 / 6 / 2;
+          }
+          &:nth-child(6) {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+          &:nth-child(7) {
+            grid-area: 2 / 2 / 3 / 3;
+          }
+          &:nth-child(8) {
+            grid-area: 3 / 2 / 4 / 3;
+          }
+          &:nth-child(9) {
+            grid-area: 4 / 2 / 5 / 3;
+          }
+          &:nth-child(10) {
+            grid-area: 5 / 2 / 6 / 3;
+          }
+        }
+      }
+    }
+    &_professional {
+      & > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        & > label {
+          &:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+          &:nth-child(2) {
+            grid-area: 2 / 1 / 3 / 2;
+            justify-content: flex-end;
+          }
+        }
+        & > div {
+          grid-area: 1 / 2 / 3 / 3;
+        }
+      }
+    }
+  }
 }

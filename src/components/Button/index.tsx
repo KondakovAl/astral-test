@@ -14,7 +14,7 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({ children, type, className, onClick }) => {
   return (
     <button
-      className={cn(className, styles.button)}
+      className={cn(styles.button, className)}
       type={type ? type : 'button'}
       onClick={onClick}
     >

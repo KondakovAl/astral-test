@@ -20,6 +20,7 @@ const CardList: FC<CardListProps> = ({ cards, className }) => {
 
   useEffect(() => {
     dispatch(setTotalCount(cards.length));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const indexOfLast = page * limit;
